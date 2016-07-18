@@ -1,0 +1,14 @@
+<%  if @books.blank? %>
+<p>There are'nt any books here.</p>
+<%  else %>
+<p>Yeah! still some left here ^^</p>
+
+<ul id= "books">
+	<% @books.each do |b| %>
+	<li> <%= link_to b.title, {:action => 'show', :id => b.id} -%></li>
+	<% end %>
+</ul>
+
+<% end %>
+<!-- <%= %> tags is a link_to method call -->
+<p> <%= link_to "Add new Book", {:action => 'new'}%></p>

@@ -1,0 +1,105 @@
+Found 21 candidates for `Object` definition:
+
+Candidate 1/21: /home/thanhyen/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/psych/core_ext.rb @ line 2:
+Number of lines: 1
+
+frozen_string_literal: false
+
+Candidate 2/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/blank.rb @ line 3:
+Number of lines: 1
+
+encoding: utf-8
+
+Candidate 3/21:  @ line :
+
+No content found.
+
+Candidate 4/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/try.rb @ line 1:
+
+No content found.
+
+Candidate 5/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/inclusion.rb @ line 1:
+
+No content found.
+
+Candidate 6/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/to_query.rb @ line 3:
+
+No content found.
+
+Candidate 7/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/instance_variables.rb @ line 1:
+
+No content found.
+
+Candidate 8/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/pry-0.10.4/lib/pry/core_extensions.rb @ line 22:
+
+No content found.
+
+Candidate 9/21:  @ line :
+
+No content found.
+
+Candidate 10/21:  @ line :
+
+No content found.
+
+Candidate 11/21:  @ line :
+
+No content found.
+
+Candidate 12/21: /home/thanhyen/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/psych/deprecated.rb @ line 81:
+
+No content found.
+
+Candidate 13/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/acts_like.rb @ line 1:
+
+No content found.
+
+Candidate 14/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/duplicable.rb @ line 19:
+Number of lines: 18
+
+--
+Most objects are cloneable, but not all. For example you can't dup [32mnil[0m:
+
+  [1;36mnil[0m.dup [1;34m# => TypeError: can't dup NilClass[0m
+
+Classes may signal their instances are not duplicable removing [32mdup[0m/[32mclone[0m
+or raising exceptions from them. So, to dup an arbitrary object you normally
+use an optimistic approach and are ready to catch an exception, say:
+
+  arbitrary_object.dup [32mrescue[0m object
+
+Rails dups objects in a few critical spots where they are not that arbitrary.
+That rescue is very expensive (like 40 times slower than a predicate), and it
+is often triggered.
+
+That's why we hardcode the following cases and check duplicable? instead of
+using that rescue idiom.
+++
+
+Candidate 15/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/deep_dup.rb @ line 3:
+
+No content found.
+
+Candidate 16/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/object/with_options.rb @ line 3:
+
+No content found.
+
+Candidate 17/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/string/output_safety.rb @ line 119:
+
+No content found.
+
+Candidate 18/21:  @ line :
+
+No content found.
+
+Candidate 19/21:  @ line :
+
+No content found.
+
+Candidate 20/21: /home/thanhyen/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.6/lib/active_support/core_ext/kernel/agnostics.rb @ line 1:
+
+No content found.
+
+Candidate 21/21:  @ line :
+
+No content found.
